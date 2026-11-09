@@ -1,4 +1,4 @@
-function multiplyValue(value: number, multiplier?: number) {
+function multiplyValue(value: number, multiplier?: number):number{
   if (multiplier === undefined) {
     return value * 2;
   } else {
@@ -8,14 +8,14 @@ function multiplyValue(value: number, multiplier?: number) {
 
 
 
-function processInput(input: string | number | boolean) {
+function processInput(input: string | number | boolean): string | number {
   if (typeof input === "string") {
-    const value = input.trim().toLowerCase();
+    const value  = input.trim().toLowerCase();
     return value
   } else if (typeof input === "number") {
     const value = input * 10
     return value
-  } else if (typeof input === "boolean") {
+  } else{
     if (input) {
       return "Active"
     }
